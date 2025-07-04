@@ -3,6 +3,9 @@ from textblob import TextBlob
 from keybert import KeyBERT
 import matplotlib.pyplot as plt
 import seaborn as sns
+import nltk
+nltk.download('punkt')  # Required for TextBlob to tokenize sentences
+
 
 # Load review data
 df = pd.read_csv("data/reviews.csv")
@@ -57,4 +60,5 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.savefig("data/keyword_chart.png")
 plt.show()
+
 
